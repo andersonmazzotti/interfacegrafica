@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author anderson.mazzotti
  */
-public class frm_Principal extends javax.swing.JFrame {
+public class frm_Calculadora extends javax.swing.JFrame {
 
     /**
      * Creates new form frm_Principal
      */
-    public frm_Principal() {
+    public frm_Calculadora() {
         initComponents();
     }
 
@@ -43,7 +43,7 @@ public class frm_Principal extends javax.swing.JFrame {
         rbMultiplicar = new javax.swing.JRadioButton();
         rbDividir = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Agecom");
         setResizable(false);
 
@@ -228,20 +228,21 @@ public class frm_Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frm_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frm_Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frm_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frm_Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frm_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frm_Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frm_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frm_Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frm_Principal().setVisible(true);
+                new frm_Calculadora().setVisible(true);
             }
         });
     }

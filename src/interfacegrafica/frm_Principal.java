@@ -29,187 +29,111 @@ public class frm_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        txtNum1 = new javax.swing.JTextField();
-        txtNum2 = new javax.swing.JTextField();
-        txtResultado = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        btnCalcular = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        rbSomar = new javax.swing.JRadioButton();
-        rbSubtrair = new javax.swing.JRadioButton();
-        rbMultiplicar = new javax.swing.JRadioButton();
-        rbDividir = new javax.swing.JRadioButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        menusair = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Agecom");
+        setTitle("MENU PRINCIPAL");
+        setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Agecom");
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\anderson.mazzotti\\Desktop\\logo-java-512.png")); // NOI18N
 
-        txtNum1.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Arquivo");
+
+        jMenuItem1.setText("Cadastrar");
+        jMenu1.add(jMenuItem1);
+
+        menusair.setText("Sair");
+        menusair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNum1ActionPerformed(evt);
+                menusairActionPerformed(evt);
             }
         });
+        jMenu1.add(menusair);
 
-        txtResultado.setEditable(false);
-        txtResultado.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        jMenuBar1.add(jMenu1);
 
-        jLabel2.setText("Resultado");
+        jMenu2.setText("Aplicativos");
 
-        btnCalcular.setText("Calcular");
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setText("Calculadora");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
+        jMenu2.add(jMenuItem3);
 
-        jLabel3.setText("Valor A:");
-
-        jLabel4.setText("Valor B:");
-
-        buttonGroup1.add(rbSomar);
-        rbSomar.setText("Soma");
-
-        buttonGroup1.add(rbSubtrair);
-        rbSubtrair.setText("Subtrair");
-        rbSubtrair.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem2.setText("Agenda");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbSubtrairActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
+        jMenu2.add(jMenuItem2);
 
-        buttonGroup1.add(rbMultiplicar);
-        rbMultiplicar.setText("Multiplicar");
+        jMenuBar1.add(jMenu2);
 
-        buttonGroup1.add(rbDividir);
-        rbDividir.setText("Dividir");
+        jMenu3.setText("Sobre");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(btnCalcular))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4))
-                                .addGap(31, 31, 31)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtNum2, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                                    .addComponent(txtNum1)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rbSomar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rbSubtrair)
-                                .addGap(10, 10, 10)
-                                .addComponent(rbMultiplicar)
-                                .addGap(18, 18, 18)
-                                .addComponent(rbDividir))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(21, 21, 21)
-                                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(186, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbSomar)
-                    .addComponent(rbSubtrair)
-                    .addComponent(rbMultiplicar)
-                    .addComponent(rbDividir))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(btnCalcular)
-                .addGap(92, 92, 92))
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNum1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNum1ActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        frm_Calculadora calc = new frm_Calculadora();
+        calc.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-        String a = txtNum1.getText();
-        String b = txtNum2.getText();
-
-        int n1 = Integer.parseInt(a);
-        int n2 = Integer.parseInt(b);
-
-        
-           
-        if (rbSomar.isSelected()) {
-            int calculo = n1 + n2;
-            String c = String.valueOf(calculo);
-            txtResultado.setText(c);
-            
-        }else if (rbSubtrair.isSelected()) {
-            
-            int calculo = n1 - n2;
-            String c = String.valueOf(calculo);
-            txtResultado.setText(c);
-        
-        }else if (rbMultiplicar.isSelected()) {
-            
-            int calculo = n1 * n2;
-            String c = String.valueOf(calculo);
-            txtResultado.setText(c);
-        
-        }else if (rbDividir.isSelected()) {
-            
-            int calculo = n1 / n2;
-            String c = String.valueOf(calculo);
-            txtResultado.setText(c);
-        
-        } else {
-            JOptionPane.showMessageDialog(null, "Selecion e uma operação!");
-        }
-        
-        
-        
-     
-
-        
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        JOptionPane.showMessageDialog(null, "Versão 1.0");
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcularActionPerformed
+    }//GEN-LAST:event_jMenu3MouseClicked
 
-    private void rbSubtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSubtrairActionPerformed
+    private void menusairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menusairActionPerformed
+            System.exit(0);
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbSubtrairActionPerformed
+    }//GEN-LAST:event_menusairActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        frm_Agenda agenda = new frm_Agenda();
+        agenda.setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,18 +171,14 @@ public class frm_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcular;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton rbDividir;
-    private javax.swing.JRadioButton rbMultiplicar;
-    private javax.swing.JRadioButton rbSomar;
-    private javax.swing.JRadioButton rbSubtrair;
-    private javax.swing.JTextField txtNum1;
-    private javax.swing.JTextField txtNum2;
-    private javax.swing.JTextField txtResultado;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem menusair;
     // End of variables declaration//GEN-END:variables
 }
