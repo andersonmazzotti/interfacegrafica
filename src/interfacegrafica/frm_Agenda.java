@@ -5,6 +5,7 @@
  */
 package interfacegrafica;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -97,6 +98,11 @@ public class frm_Agenda extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnAtualizar.setText("Atualizar");
 
@@ -180,6 +186,19 @@ public class frm_Agenda extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnInserirActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+        
+        if (pbLista.getSelectedRow() !=-1) {
+            DefaultTableModel dtmAgenda = (DefaultTableModel) pbLista.getModel();
+            dtmAgenda.removeRow(pbLista.getSelectedRow());
+                      
+            } else {
+            JOptionPane.showMessageDialog(null, "Selecione um Registro para Excluir");
+        }
+        
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
