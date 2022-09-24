@@ -57,6 +57,7 @@ public class frm_Agenda extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(new javax.swing.ImageIcon("C:\\Users\\anderson.mazzotti\\Desktop\\insert (1).png").getImage());
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -88,8 +89,14 @@ public class frm_Agenda extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        pbLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pbListaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(pbLista);
 
+        btnInserir.setIcon(new javax.swing.ImageIcon("C:\\Users\\anderson.mazzotti\\Desktop\\insert (1).png")); // NOI18N
         btnInserir.setText("Inserir");
         btnInserir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +173,7 @@ public class frm_Agenda extends javax.swing.JFrame {
                     .addComponent(btnInserir)
                     .addComponent(btnExcluir)
                     .addComponent(btnAtualizar))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
@@ -197,8 +204,21 @@ public class frm_Agenda extends javax.swing.JFrame {
             } else {
             JOptionPane.showMessageDialog(null, "Selecione um Registro para Excluir");
         }
+     
         
+        
+      
+       
     }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void pbListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pbListaMouseClicked
+
+       
+        
+        
+        
+        
+    }//GEN-LAST:event_pbListaMouseClicked
 
     /**
      * @param args the command line arguments
